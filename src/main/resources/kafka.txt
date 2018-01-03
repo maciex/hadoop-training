@@ -1,0 +1,7 @@
+- Tworzenie tematu
+	./kafka-topics.sh --create --zookeeper sandbox.hortonworks.com:2181 --replication-factor 1 --partitions 1 --topic data
+	./kafka-topics.sh --list --zookeeper sandbox.hortonworks.com:2181
+- Wysyłanie standardowego wejścia jako dane
+	./kafka-console-producer.sh --broker-list sandbox.hortonworks.com:6667 --topic data
+- Nasłuchiwanie wiadomośći (osobne okno)
+	./kafka-console-consumer.sh --bootstrap-server sandbox.hortonworks.com:6667 --topic data --from-beginning

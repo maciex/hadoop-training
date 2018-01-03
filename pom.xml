@@ -22,7 +22,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>pl.training.hadoop.WordsCount</mainClass>
+                            <mainClass>pl.training.hadoop.Application</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -46,6 +46,12 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.11</artifactId>
             <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.16</version>
+            <scope>compile</scope>
         </dependency>
     </dependencies>
 

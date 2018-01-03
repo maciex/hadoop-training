@@ -4,8 +4,8 @@ import org.apache.spark.api.java.JavaSparkContext;
 
 import java.io.Serializable;
 
-public interface Task<T> extends Serializable {
+public interface TaskWithoutResult extends Serializable {
 
-    T execute(JavaSparkContext sparkContext);
+    void execute(JavaSparkContext sparkContext);
 
 }
