@@ -5,8 +5,8 @@ import pl.training.hadoop.spark.Spark;
 public class Application {
 
     public static void main(String[] args) {
-        try (Spark spark = new Spark("local[*]", "WordsCount")) {
-            spark.execute(new WorstMoviesTask());
+        try (Spark spark = new Spark("local[*]", "Consumer")) {
+            spark.execute(new ConsumerTask());
         }
     }
 

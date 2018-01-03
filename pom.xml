@@ -22,7 +22,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>pl.training.hadoop.kafka.Consumer</mainClass>
+                            <mainClass>pl.training.hadoop.Application</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -46,6 +46,16 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.11</artifactId>
             <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming_2.11</artifactId>
+            <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.spark</groupId>
+            <artifactId>spark-streaming-kafka_2.11</artifactId>
+            <version>1.6.3</version>
         </dependency>
         <dependency>
             <groupId>org.apache.kafka</groupId>
