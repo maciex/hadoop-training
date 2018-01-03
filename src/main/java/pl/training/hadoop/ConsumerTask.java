@@ -23,9 +23,7 @@ public class ConsumerTask implements TaskWithoutResult {
         JavaPairInputDStream<String, String> stream = KafkaUtils.createDirectStream(streamingContext, String.class, String.class,
                 StringDecoder.class, StringDecoder.class, prepareParameters(), singleton(TOPIC_NAME));
 
-        stream.foreachRDD(rdd -> {
-            rdd.foreach(record -> System.out.println(record._2));
-        });
+        stream.foreachRDD(rdd -> rdd.foreach(record -> System.out.println(record._2)));
 
         streamingContext.start();
         try {
