@@ -22,7 +22,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>pl.training.hadoop.Application</mainClass>
+                            <mainClass>pl.training.hadoop.kafka.Consumer</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -46,6 +46,11 @@
             <groupId>org.apache.spark</groupId>
             <artifactId>spark-core_2.11</artifactId>
             <version>${spark.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka-clients</artifactId>
+            <version>1.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
