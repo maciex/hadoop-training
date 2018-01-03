@@ -6,6 +6,8 @@ import pl.training.hadoop.spark.Hdfs;
 import pl.training.hadoop.spark.TaskWithoutResult;
 import scala.Tuple2;
 
+import java.util.stream.StreamSupport;
+
 public class WorstMoviesTask implements TaskWithoutResult {
 
     private static final String SEPARATOR = "\t";
@@ -34,11 +36,10 @@ public class WorstMoviesTask implements TaskWithoutResult {
     }
 
     private Double moviesToAvgRating(Iterable<Movie> movies) {
-        double ratings = 0;
-        for (Movie movie : movies) {
-            ratings += movie.getRating();
-        }
-        return ratings / movies.spliterator().estimateSize();
+        return StreamSupport.stream(movies.spliterator(), false)
+                .mapToDouble(Movie::getRating)
+                .average()
+                .orElse(0);
     }
 
 }
