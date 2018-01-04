@@ -1,4 +1,4 @@
-package pl.training.hadoop.spark;
+package pl.training.hadoop;
 
 public class Hdfs {
 

@@ -1,4 +1,4 @@
-package pl.training.hadoop;
+package pl.training.hadoop.spark;
 
 import kafka.serializer.StringDecoder;
 import org.apache.spark.api.java.JavaSparkContext;
@@ -6,7 +6,6 @@ import org.apache.spark.streaming.Duration;
 import org.apache.spark.streaming.api.java.JavaPairInputDStream;
 import org.apache.spark.streaming.api.java.JavaStreamingContext;
 import org.apache.spark.streaming.kafka.KafkaUtils;
-import pl.training.hadoop.spark.TaskWithoutResult;
 
 import java.util.HashMap;
 import java.util.Map;

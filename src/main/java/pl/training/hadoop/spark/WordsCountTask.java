@@ -1,8 +1,7 @@
-package pl.training.hadoop;
+package pl.training.hadoop.spark;
 
 import org.apache.spark.api.java.JavaSparkContext;
-import pl.training.hadoop.spark.Hdfs;
-import pl.training.hadoop.spark.TaskWithoutResult;
+import pl.training.hadoop.Hdfs;
 import scala.Tuple2;
 
 import java.util.Arrays;
