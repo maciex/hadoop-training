@@ -9,7 +9,7 @@ public class RatingsProducerTask implements TaskWithoutResult {
     private static final String SOURCE_FILE = "u.data";
     private static final Hdfs hdfs = new Hdfs("hdfs:///user/maria_dev/%s");
     private static final int RATINGS_COUNT = 10_000;
-    private static final int DELAY_IN_MILLS = 1_000;
+    private static final int DELAY_IN_MILLS = 1_00;
 
     private Producer<String> producer = new Producer<>();
 

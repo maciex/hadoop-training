@@ -10,12 +10,11 @@ import java.io.Serializable;
 @RequiredArgsConstructor
 @NoArgsConstructor
 @Data
-public class Movie implements Serializable {
+public class Metadata implements Serializable {
 
     @NonNull
     private Long id;
     @NonNull
-    private Double rating;
     private String title;
 
 }
